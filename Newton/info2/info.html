@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Información del Método de Newton-Raphson</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Información del Método de Newton-Raphson</h1>
+        <p>
+            El método de Newton-Raphson es un método iterativo utilizado para encontrar raíces de funciones no lineales. 
+            Se basa en la idea de aproximar la raíz de una función mediante el uso de la derivada de la función.
+        </p>
+        <h2>Fórmula del Método</h2>
+        <p>
+            Dada una función <strong>f(x)</strong> y su derivada <strong>f'(x)</strong>, la fórmula del método es:
+        </p>
+        <p><strong>x<sub>n+1</sub> = x<sub>n</sub> - f(x<sub>n</sub>) / f'(x<sub>n</sub>)</strong></p>
+        <h2>Pasos del Método de Newton-Raphson</h2>
+        <ol>
+            <li>Definir la función f(x) y su derivada f'(x).</li>
+            <li>Elegir un valor inicial <strong>x<sub>0</sub></strong>.</li>
+            <li>Calcular el siguiente valor usando la fórmula: 
+                <strong>x<sub>n+1</sub> = x<sub>n</sub> - f(x<sub>n</sub>) / f'(x<sub>n</sub>)</strong>.
+            </li>
+            <li>Repetir el paso 3 hasta que la diferencia entre <strong>x<sub>n</sub></strong> y <strong>x<sub>n+1</sub></strong> sea menor que un valor de tolerancia.</li>
+        </ol>
+        <h2>Ejemplo Práctico</h2>
+        <p>
+            Supongamos que queremos encontrar la raíz de la función f(x) = x² - 4. La derivada de la función es f'(x) = 2x. 
+            Aplicamos el método de Newton-Raphson siguiendo estos pasos:
+        </p>
+        <ol>
+            <li>
+                Elegimos un valor inicial: 
+                <strong>x<sub>0</sub> = 1</strong>.
+            </li>
+            <li>
+                Calculamos el siguiente valor:
+                <strong>x<sub>1</sub> = 1 - (f(1) / f'(1)) = 1 - ((1)² - 4) / (2 * 1) = 1 - (-3) / 2 = 2.5</strong>.
+            </li>
+            <li>
+                Repetimos el proceso:
+                <ul>
+                    <li>
+                        Calculamos:
+                        <strong>x<sub>2</sub> = 2.5 - ((2.5)² - 4) / (2 * 2.5) = 2.5 - (6.25 - 4) / 5 = 2.1</strong>.
+                    </li>
+                    <li>
+                        Calculamos nuevamente:
+                        <strong>x<sub>3</sub> = 2.1 - ((2.1)² - 4) / (2 * 2.1) = 2.1 - (4.41 - 4) / 4.2 = 2.005</strong>.
+                    </li>
+                    <li>
+                        Este proceso se repite hasta que obtenemos un valor que converge. Por ejemplo, después de varias iteraciones, 
+                        podríamos encontrar que <strong>x ≈ 2.0</strong> es una buena aproximación de la raíz.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>
+            El resultado final indica que la raíz de la función f(x) = x² - 4 se encuentra aproximadamente en 
+            <strong>x = 2</strong>.
+        </p>
+        <button class="main-button" onclick="window.location.href='../newt.html'">Volver al Inicio</button>
+    </div>
+</body>
+</html>
